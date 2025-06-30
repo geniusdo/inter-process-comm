@@ -14,6 +14,8 @@ endif()
 
 option(BUILD_UNIT_TESTS "Build unit tests" ON)
 
+find_package(Threads REQUIRED)
+
 include(FetchContent)
 
 FetchContent_Declare(

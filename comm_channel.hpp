@@ -184,7 +184,7 @@ private:
 
   static UnixEp createEp(std::string_view sv) requires(Mode == ChannelMode::Unix) {
     std::remove(std::string(sv).c_str());
-    return UnixEp(sv);
+    return UnixEp(std::string(sv));
   }
 
   asio::steady_timer timer_;
